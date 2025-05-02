@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yunisha and Yugesh Kirana Pasal - Pokhara</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#2B4CCE',secondary:'#FF6B35'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #333333;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+        }
+        .hero-section {
+            background-image: url('https://public.readdy.ai/ai/img_res/77146790636d0d4b32119503c85edf54.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        .custom-checkbox {
+            display: inline-block;
+            position: relative;
+            cursor: pointer;
+        }
+        .custom-checkbox input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 20px;
+            width: 20px;
+            background-color: #fff;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+        }
+        .custom-checkbox input:checked ~ .checkmark {
+            background-color: #2B4CCE;
+            border-color: #2B4CCE;
+        }
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+        .custom-checkbox input:checked ~ .checkmark:after {
+            display: block;
+        }
+        .custom-checkbox .checkmark:after {
+            left: 6px;
+            top: 2px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+        .nav-link {
+            position: relative;
+            padding: 8px 0;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #2B4CCE;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .nav-link.active::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="flex items-center">
+                <a href="#" class="text-3xl font-['text-arial'] text-arial">Yunisha and Yugesh Kirana Pasal</a>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#" class="nav-link font-medium text-primary hover:text-primary/80 transition active">Home</a>
+                <a href="#products" class="nav-link font-medium text-gray-700 hover:text-primary transition">Products</a>
+                <a href="#special-offers" class="nav-link font-medium text-gray-700 hover:text-primary transition">Special Offers</a>
+                <a href="#contact" class="nav-link font-medium text-gray-700 hover:text-primary transition">Contact</a>
+            </nav>
+            
+            <!-- Search Bar -->
+            <div class="hidden md:flex items-center relative">
+                <div class="relative">
+                    <input type="text" placeholder="Search products..." class="pl-10 pr-4 py-2 border border-gray-200 rounded focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary text-sm w-64">
+                    <div class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 flex items-center justify-center text-gray-400">
+                        <i class="ri-search-line"></i>
+                    </div>
+                </div>
+                <div class="ml-4 w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200 cursor-pointer">
+                    <i class="ri-shopping-cart-line"></i>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden flex items-center">
+                <div class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200 cursor-pointer mr-2">
+                    <i class="ri-search-line"></i>
+                </div>
+                <div class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200 cursor-pointer mr-2">
+                    <i class="ri-shopping-cart-line"></i>
+                </div>
+                <button class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200">
+                    <i class="ri-menu-line"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section relative">
+        <div class="absolute inset-0 bg-black/40"></div>
+        <div class="container mx-auto px-4 py-24 md:py-32 relative z-10">
+            <div class="max-w-xl">
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Welcome to Yunisha and Yugesh Kirana Pasal</h1>
+                <p class="text-lg text-white/90 mb-8">Your one-stop shop for groceries, household essentials, and more in Pokhara</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button class="bg-primary hover:bg-primary/90 text-white py-3 px-6 rounded-button font-medium transition whitespace-nowrap">Shop Now</button>
+                </div>
+                <div class="mt-8 inline-flex items-center bg-white/ backdrop-blur-sm px-4 py-2 rounded-full">
+                    <div class="w-6 h-6 flex items-center justify-center mr-2">
+                        <i class="ri-map-pin-line text-white"></i>
+                    </div>
+                    <p class="text-white font-medium">Pokhara-26, Tinmuhane-Chowk</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1">
+                    <h2 class="text-3xl font-bold mb-6">About Yunisha and Yugesh Kirana Pasal</h2>
+                    <p class="text-gray-700 mb-6">Established in 2015, Yunisha and Yugesh Kirana Pasal has been serving the Pokhara community with quality products and exceptional service. We pride ourselves on offering a wide range of groceries, household essentials, and personal care items at competitive prices.</p>
+                    <p class="text-gray-700 mb-8">Our friendly staff is always ready to assist you in finding exactly what you need, making your shopping experience pleasant and convenient.</p>
+                    
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <div class="w-10 h-10 flex items-center justify-center bg-primary/10 text-primary rounded-full mb-4">
+                                <i class="ri-time-line"></i>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-3">Store Hours</h3>
+                            <ul class="space-y-2 text-sm text-gray-600">
+                                <li class="flex justify-between">
+                                    <span>Monday - Friday</span>
+                                    <span>7:00 AM - 9:00 PM</span>
+                                </li>
+                                <li class="flex justify-between">
+                                    <span>Saturday</span>
+                                    <span>8:00 AM - 8:00 PM</span>
+                                </li>
+                                <li class="flex justify-between">
+                                    <span>Sunday</span>
+                                    <span>8:00 AM - 6:00 PM</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <div class="w-10 h-10 flex items-center justify-center bg-primary/10 text-primary rounded-full mb-4">
+                                <i class="ri-phone-line"></i>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-3">Contact Us</h3>
+                            <ul class="space-y-2 text-sm text-gray-600">
+                                <li class="flex items-center">
+                                    <div class="w-5 h-5 flex items-center justify-center mr-2 text-gray-500">
+                                        <i class="ri-phone-line"></i>
+                                    </div>
+                                    <span>+977 61 234567</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <div class="w-5 h-5 flex items-center justify-center mr-2 text-gray-500">
+                                        <i class="ri-mail-line"></i>
+                                    </div>
+                                    <span>info@syunishaandyugesh.com.np</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <div class="w-5 h-5 flex items-center justify-center mr-2 text-gray-500">
+                                        <i class="ri-map-pin-line"></i>
+                                    </div>
+                                    <span>Tinmuhane, Pokhara-26</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="order-1 md:order-2">
+                    <div class="relative">
+                        <img src="https://public.readdy.ai/ai/img_res/97c1001f1447ba26be9361111931bace.jpg" alt="Semsa Store Interior" class="rounded-lg shadow-lg w-full h-auto object-cover">
+                        <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-lg">
+                            <div class="flex items-center gap-2">
+                                <div class="w-10 h-10 flex items-center justify-center bg-primary text-white rounded-full">
+                                    <i class="ri-award-line"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium">Trusted by</p>
+                                    <p class="text-lg font-bold">5000+ Customers</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Featured Categories -->
+    <section id="products" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Shop by Category</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Explore our wide range of products across various categories to find everything you need in one place.</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <a href="#" class="group">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://public.readdy.ai/ai/img_res/f13ccacae284296f725eea66b009e092.jpg" alt="Groceries" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-semibold text-lg mb-1">Groceries</h3>
+                            <p class="text-gray-600 text-sm mb-3">Fresh & packaged foods</p>
+                            <div class="flex items-center text-primary text-sm font-medium">
+                                <span>Shop Now</span>
+                                <div class="w-4 h-4 flex items-center justify-center ml-1">
+                                    <i class="ri-arrow-right-line"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="#" class="group">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://public.readdy.ai/ai/img_res/bb4eb8b3ffd199d33c79b99cde5b3667.jpg" alt="Household Essentials" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-semibold text-lg mb-1">Household</h3>
+                            <p class="text-gray-600 text-sm mb-3">Cleaning & home essentials</p>
+                            <div class="flex items-center text-primary text-sm font-medium">
+                                <span>Shop Now</span>
+                                <div class="w-4 h-4 flex items-center justify-center ml-1">
+                                    <i class="ri-arrow-right-line"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="#" class="group">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://public.readdy.ai/ai/img_res/08088095deb6d7bf6caba8eb79c8cced.jpg" alt="Personal Care" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-semibold text-lg mb-1">Personal Care</h3>
+                            <p class="text-gray-600 text-sm mb-3">Beauty & hygiene products</p>
+                            <div class="flex items-center text-primary text-sm font-medium">
+                                <span>Shop Now</span>
+                                <div class="w-4 h-4 flex items-center justify-center ml-1">
+                                    <i class="ri-arrow-right-line"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="#" class="group">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://public.readdy.ai/ai/img_res/47e0a8820d5f8727e17f5c3873604aed.jpg" alt="Stationery" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-semibold text-lg mb-1">Stationery</h3>
+                            <p class="text-gray-600 text-sm mb-3">Office & school supplies</p>
+                            <div class="flex items-center text-primary text-sm font-medium">
+                                <span>Shop Now</span>
+                                <div class="w-4 h-4 flex items-center justify-center ml-1">
+                                    <i class="ri-arrow-right-line"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="text-center mt-10">
+                <a href="#" class="inline-flex items-center justify-center bg-white border border-gray-300 text-primary font-medium py-3 px-6 rounded-button hover:bg-gray-50 transition whitespace-nowrap">
+                    <span>View All Categories</span>
+                    <div class="w-5 h-5 flex items-center justify-center ml-2">
+                        <i class="ri-arrow-right-line"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offers -->
+    <section id="special-offers" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Special Offers</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Don't miss out on our limited-time deals and seasonal promotions.</p>
+            </div>
+            
+            <div class="bg-gradient-to-r from-primary/10 to-secondary/10 p-6 md:p-10 rounded-xl mb-12">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <span class="inline-block bg-secondary text-white text-sm font-medium px-3 py-1 rounded-full mb-4">Limited Time Offer</span>
+                        <h3 class="text-2xl md:text-3xl font-bold mb-4">New Tear Special Offer</h3>
+                        <p class="text-gray-700 mb-6">Celebrate New-Year with amazing discounts on groceries, festive decorations, and gifts. Valid until May 15, 2025.</p>
+                        <div class="flex flex-wrap gap-4 mb-8">
+                            <div class="bg-white p-3 rounded-lg text-center min-w-20">
+                                <div class="text-2xl font-bold text-primary">12</div>
+                                <div class="text-xs text-gray-500">Days</div>
+                            </div>
+                            <div class="bg-white p-3 rounded-lg text-center min-w-20">
+                                <div class="text-2xl font-bold text-primary">08</div>
+                                <div class="text-xs text-gray-500">Hours</div>
+                            </div>
+                            <div class="bg-white p-3 rounded-lg text-center min-w-20">
+                                <div class="text-2xl font-bold text-primary">45</div>
+                                <div class="text-xs text-gray-500">Minutes</div>
+                            </div>
+                            <div class="bg-white p-3 rounded-lg text-center min-w-20">
+                                <div class="text-2xl font-bold text-primary">22</div>
+                                <div class="text-xs text-gray-500">Seconds</div>
+                            </div>
+                        </div>
+                        <button class="bg-primary hover:bg-primary/90 text-white py-3 px-6 rounded-button font-medium transition whitespace-nowrap">Shop Festival Deals</button>
+                    </div>
+                    <div>
+                        <img src="https://public.readdy.ai/ai/img_res/a7ce60a6e5eb46a5ca50fb3b99a94a20.jpg" alt="Dashain Festival Offers" class="w-full h-auto rounded-lg shadow-lg">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition group">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://public.readdy.ai/ai/img_res/9d5e300a5037c0e6ad870256b9e82728.jpg" alt="Grocery Deals" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        <div class="absolute top-3 right-3 bg-secondary text-white text-sm font-bold px-3 py-1 rounded-full">
+                            25% OFF
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-semibold text-lg mb-2">Grocery Essentials</h3>
+                        <p class="text-gray-600 text-sm mb-3">Save on rice, lentils, cooking oils, and more</p>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-gray-400 line-through mr-2">Rs. 2,500</span>
+                                <span class="text-primary font-bold">Rs. 1,875</span>
+                            </div>
+                            <button class="bg-gray-100 hover:bg-gray-200 text-gray-800 p-2 rounded-full w-8 h-8 flex items-center justify-center transition">
+                                <i class="ri-shopping-cart-line"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition group">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://public.readdy.ai/ai/img_res/a478914c75f4e730e62192e60f79f4b0.jpg" alt="Cleaning Supplies" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        <div class="absolute top-3 right-3 bg-secondary text-white text-sm font-bold px-3 py-1 rounded-full">
+                            30% OFF
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-semibold text-lg mb-2">Cleaning Supplies</h3>
+                        <p class="text-gray-600 text-sm mb-3">Detergents, cleaners, and household essentials</p>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-gray-400 line-through mr-2">Rs. 1,800</span>
+                                <span class="text-primary font-bold">Rs. 1,260</span>
+                            </div>
+                            <button class="bg-gray-100 hover:bg-gray-200 text-gray-800 p-2 rounded-full w-8 h-8 flex items-center justify-center transition">
+                                <i class="ri-shopping-cart-line"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition group">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://public.readdy.ai/ai/img_res/91c32d32e8dfe8b35d9cd5d4c0e8277e.jpg" alt="Personal Care" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        <div class="absolute top-3 right-3 bg-secondary text-white text-sm font-bold px-3 py-1 rounded-full">
+                            20% OFF
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-semibold text-lg mb-2">Personal Care</h3>
+                        <p class="text-gray-600 text-sm mb-3">Skincare, haircare, and beauty products</p>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-gray-400 line-through mr-2">Rs. 3,200</span>
+                                <span class="text-primary font-bold">Rs. 2,560</span>
+                            </div>
+                            <button class="bg-gray-100 hover:bg-gray-200 text-gray-800 p-2 rounded-full w-8 h-8 flex items-center justify-center transition">
+                                <i class="ri-shopping-cart-line"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-10">
+                <a href="#" class="inline-flex items-center justify-center bg-primary text-white font-medium py-3 px-6 rounded-button hover:bg-primary/90 transition whitespace-nowrap">
+                    <span>View All Offers</span>
+                    <div class="w-5 h-5 flex items-center justify-center ml-2">
+                        <i class="ri-arrow-right-line"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Contact Us</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Have questions or need assistance? Reach out to us through any of the channels below.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm mb-6">
+                        <h3 class="text-xl font-semibold mb-4">Store Information</h3>
+                        <ul class="space-y-4">
+                            <li class="flex">
+                                <div class="w-10 h-10 flex items-center justify-center bg-primary/10 text-primary rounded-full mr-4 flex-shrink-0">
+                                    <i class="ri-map-pin-line"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Address</h4>
+                                    <p class="text-gray-600">Tinmuhane, Pokhara-26, Kaski, Nepal</p>
+                                </div>
+                            </li>
+                            <li class="flex">
+                                <div class="w-10 h-10 flex items-center justify-center bg-primary/10 text-primary rounded-full mr-4 flex-shrink-0">
+                                    <i class="ri-phone-line"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Phone</h4>
+                                    <p class="text-gray-600">+977 61234567</p>
+                                    <p class="text-gray-600">+977 9801234567</p>
+                                </div>
+                            </li>
+                            <li class="flex">
+                                <div class="w-10 h-10 flex items-center justify-center bg-primary/10 text-primary rounded-full mr-4 flex-shrink-0">
+                                    <i class="ri-mail-line"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Email</h4>
+                                    <p class="text-gray-600">info@yunishaandyugesh.com.np</p>
+                                    <p class="text-gray-600">support@unishaandyugesh.com.np</p>
+                                </div>
+                            </li>
+                            <li class="flex">
+                                <div class="w-10 h-10 flex items-center justify-center bg-primary/10 text-primary rounded-full mr-4 flex-shrink-0">
+                                    <i class="ri-time-line"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Opening Hours</h4>
+                                    <p class="text-gray-600">Monday - Friday: 7:00 AM - 9:00 PM</p>
+                                    <p class="text-gray-600">Saturday: 8:00 AM - 8:00 PM</p>
+                                    <p class="text-gray-600">Sunday: 8:00 AM - 6:00 PM</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h3 class="text-xl font-semibold mb-4">Follow Us</h3>
+                        <div class="flex space-x-4">
+                            <a href="https://www.youtube.com/watch?v=Y8hVNwqgkPs&t=105s" target="_blank" class="w-10 h-10 flex items-center justify-center bg-blue-500 text-white rounded-full hover:bg-blue-600 transition">
+                                <i class="ri-facebook-fill"></i>
+                            </a>
+                            <a href="https://www.youtube.com/watch?v=Y8hVNwqgkPs&t=105s" target="_blank" class="w-10 h-10 flex items-center justify-center bg-pink-500 text-white rounded-full hover:bg-pink-600 transition">
+                                <i class="ri-instagram-line"></i>
+                            </a>
+                            <a href="https://www.youtube.com/watch?v=Y8hVNwqgkPs&t=105s" target="_blank" class="w-10 h-10 flex items-center justify-center bg-red-500 text-white rounded-full hover:bg-red-600 transition">
+                                <i class="ri-youtube-line"></i>
+                            </a>
+                            <a href="https://www.youtube.com/watch?v=Y8hVNwqgkPs&t=105s" target="_blank" class="w-10 h-10 flex items-center justify-center bg-green-500 text-white rounded-full hover:bg-green-600 transition">
+                                <i class="ri-whatsapp-line"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm mb-6">
+                        <h3 class="text-xl font-semibold mb-4">Send Us a Message</h3>
+                        <form>
+                            <div class="grid md:grid-cols-2 gap-4 mb-4">
+                                <div>
+                                    <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+                                    <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary text-sm">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                                    <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary text-sm">
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary text-sm">
+                            </div>
+                            <div class="mb-4">
+                                <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+                                <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary text-sm">
+                            </div>
+                            <div class="mb-4">
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Your Message</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary text-sm"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-primary hover:bg-primary/90 text-white py-3 px-6 rounded-button font-medium transition whitespace-nowrap">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 bg-white rounded-lg shadow-sm overflow-hidden h-80">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3516.5599999999995!2d84.03744839999999!3d28.184036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399597dae327b10d%3A0xb6e6ae6452844de8!2sSemsa%20Departmental%20Stores!5e0!3m2!1sen!2snp!4v1712169600000!5m2!1sen!2snp" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-16 bg-primary/5">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-2xl font-bold mb-4">Subscribe to Our Newsletter</h2>
+                <p class="text-gray-600 mb-8">Stay updated with our latest offers, new arrivals, and exclusive deals.</p>
+                <form class="flex flex-col sm:flex-row gap-3">
+                    <input type="email" placeholder="Enter your email address" class="flex-1 px-4 py-3 border border-gray-300 rounded-button focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary">
+                    <button type="submit" class="bg-primary hover:bg-primary/90 text-white py-3 px-6 rounded-button font-medium transition whitespace-nowrap">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <a href="#" class="text-3xl font-['text-arial'] text-white mb-4 inline-block">Yunisha and Yugesh Kirana Pasal</a>
+                    <p class="text-gray-400 mb-6">Your one-stop shop for all your daily needs in Pokhara.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.youtube.com/watch?v=Y8hVNwqgkPs&t=105s" target="_blank" class="w-8 h-8 flex items-center justify-center bg-gray-800 text-gray-400 rounded-full hover:bg-primary hover:text-white transition">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=Y8hVNwqgkPs&t=105s" target="_blank" class="w-8 h-8 flex items-center justify-center bg-gray-800 text-gray-400 rounded-full hover:bg-primary hover:text-white transition">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 text-gray-400 rounded-full hover:bg-primary hover:text-white transition">
+                            <i class="ri-youtube-line"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 text-gray-400 rounded-full hover:bg-primary hover:text-white transition">
+                            <i class="ri-whatsapp-line"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Products</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Special Offers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Categories</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Groceries</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Household</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Personal Care</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Stationery</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Electronics</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <ul class="space-y-3">
+                        <li class="flex">
+                            <div class="w-5 h-5 flex items-center justify-center text-gray-400 mr-3 mt-1">
+                                <i class="ri-map-pin-line"></i>
+                            </div>
+                            <span class="text-gray-400">Tinmuhane, Pokhara-26, Kaski, Nepal</span>
+                        </li>
+                        <li class="flex">
+                            <div class="w-5 h-5 flex items-center justify-center text-gray-400 mr-3 mt-1">
+                                <i class="ri-phone-line"></i>
+                            </div>
+                            <span class="text-gray-400">+977 61 234567</span>
+                        </li>
+                        <li class="flex">
+                            <div class="w-5 h-5 flex items-center justify-center text-gray-400 mr-3 mt-1">
+                                <i class="ri-mail-line"></i>
+                            </div>
+                            <span class="text-gray-400">info@yunishaandyugesh.com.np</span>
+                        </li>
+                        <li class="flex">
+                            <div class="w-5 h-5 flex items-center justify-center text-gray-400 mr-3 mt-1">
+                                <i class="ri-time-line"></i>
+                            </div>
+                            <span class="text-gray-400">7:00 AM - 9:00 PM (Mon-Fri)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-500 text-sm mb-4 md:mb-0">© 2025 Yunisha and Yugesh Kirana Pasal. All rights reserved.</p>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-8 h-5 flex items-center justify-center">
+                            <i class="ri-visa-fill text-gray-400 text-xl"></i>
+                        </div>
+                        <div class="w-8 h-5 flex items-center justify-center">
+                            <i class="ri-mastercard-fill text-gray-400 text-xl"></i>
+                        </div>
+                        <div class="w-8 h-5 flex items-center justify-center">
+                            <i class="ri-paypal-fill text-gray-400 text-xl"></i>
+                        </div>
+                        <div class="w-8 h-5 flex items-center justify-center">
+                            <i class="ri-bank-card-fill text-gray-400 text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-center mt-12">
+            <p class="text-orange-500 text-sm">
+                Developed by: 9856020179
+            </p>
+        </div>
+    </footer>
+
+    <!-- Live Chat Button -->
+    <button class="fixed bottom-6 rights-6 w-12 h-12 bg-secondary text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 hover:bg-secondary/90 z-50" id="liveChatButton">
+        <i class="ri-chat-3-line"></i>
+    </button>
+
+    <!-- Back to Top Button -->
+    <button class="fixed bottom-6 right-6 w-12 h-12 bg-primary text-white rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-primary/90" id="backToTop">
+        <i class="ri-arrow-up-line"></i>
+    </button>
+
+    <script>
+        // Back to Top Button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Live Chat Button
+        const liveChatButton = document.getElementById('liveChatButton');
+        
+        liveChatButton.addEventListener('click', () => {
+            alert('Live chat feature coming soon! Contact us at 9846740981 for immediate assistance.');
+        });
+    </script>
+</body>
+</html>
